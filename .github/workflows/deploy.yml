@@ -1,0 +1,16 @@
+# Create workflow for deployment with github actions
+name: Deploy to github
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: echo test
+      run: echo "test"
