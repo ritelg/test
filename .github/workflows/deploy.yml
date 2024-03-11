@@ -24,4 +24,3 @@ jobs:
     - name: Sync files
       run: |
         rsync -avz --exclude '.git/*' --exclude 'node_modules/*' -e "ssh -o StrictHostKeyChecking=no -p ${{ secrets.SERVER_PORT }}" ./ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }}:/home/${{ secrets.SERVER_USER }}/prod.ema-gestion.fr/
-
